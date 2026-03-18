@@ -97,11 +97,10 @@ Your journey begins here with essential setup and verification:
 | Module | Description | Duration |
 |--------|-------------|----------|
 | [Superposition](materials/maths/Superposition.ipynb) | Understanding quantum superposition | 25 min |
-| [Qubits](#scrollTo=YcR6gLpS_MI8) | Quantum bits and their properties | 30 min |
-| [Measurement](#scrollTo=_jHh1PkYQLue) | Quantum measurement and wave function collapse | 25 min |
-| [Entanglement](#scrollTo=afLi79nxg2vr) | Quantum entanglement and correlations | 30 min |
-| [Bloch Sphere](#scrollTo=SaxJgh_xxkAb) | Visualizing single-qubit states | 20 min |
-
+| [Qubits](materials/maths/Qubits.ipynb) | Quantum bits and their properties | 30 min |
+| [Measurement](materials/maths/Measurement.ipynb) | Quantum measurement and wave function collapse | 25 min |
+| [Entanglement](materials/maths/Entanglement.ipynb) | Quantum entanglement and correlations | 30 min |
+| [Bloch Sphere](materials/maths/Bloch%20Sphere.ipynb) | Visualizing single-qubit states | 20 min |
 
 ---
 
