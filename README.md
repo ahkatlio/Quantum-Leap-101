@@ -102,50 +102,6 @@ Your journey begins here with essential setup and verification:
 | [Entanglement](#scrollTo=afLi79nxg2vr) | Quantum entanglement and correlations | 30 min |
 | [Bloch Sphere](#scrollTo=SaxJgh_xxkAb) | Visualizing single-qubit states | 20 min |
 
----
-
-## Technology Stack
-
-| Tool | Purpose | Version |
-|------|---------|---------|
-| **Qiskit** | Quantum programming framework | 1.1.0 |
-| **Qiskit Aer** | High-performance simulator | Latest |
-| **Qiskit IBM Runtime** | Access to IBM quantum hardware | Latest |
-| **Python** | Programming language | 3.11 |
-| **Matplotlib** | Data visualization | Latest |
-| **NumPy** | Numerical computing | Latest |
-| **Jupyter** | Interactive notebooks | Latest |
-
----
-
-## Project Structure
-
-```
-Quantum-Leap-101/
-├── Getting Set Up.ipynb           # Setup & verification
-├── README.md                       # This file
-├── quantum_grader.py              # Homework grading utilities
-├── HiddenCode.py                  # Workshop helper functions
-├── requirements.txt               # Python dependencies
-├── .venv/                         # Virtual environment
-└── sources/
-    ├── Logo/
-    │   ├── bracu_logo_12-0-2022.webp
-    │   └── qiskit.gif
-    └── Author/
-        └── AbdullahAlOmarGalib.jpeg
-```
-
----
-
-## Key Features
-
-**Interactive Learning** - Run code cells directly in your browser  
-**Comprehensive Curriculum** - From basics to advanced algorithms  
-**Automatic Grading** - Built-in homework verification system  
-**IBM Quantum Access** - Execute code on real quantum processors  
-**Rich Visualizations** - Circuit diagrams and state visualizations  
-**Hands-on Exercises** - Practice with real quantum programming  
 
 ---
 
@@ -191,7 +147,7 @@ We welcome contributions! If you have suggestions, bug fixes, or new content:
 <table align="center" style="border: none; width: auto;">
   <tr>
     <td align="center" style="padding: 20px;">
-      <img src="sources/Author/AbdullahAlOmarGalib.jpeg" width="100" height="120" style="border-radius: 50%; object-fit: cover;"/>
+      <img src="sources/Authors/AbdullahAlOmarGalib.jpeg" width="100" height="120" style="border-radius: 50%; object-fit: cover;"/>
     </td>
     <td align="left" style="padding: 20px;">
       <h3>Abdullah Al Omar Galib (Ahkatlio)</h3>
