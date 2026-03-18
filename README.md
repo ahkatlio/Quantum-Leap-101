@@ -21,7 +21,7 @@
 
 ## About This Course
 
-This repository contains a **comprehensive collection of Jupyter notebooks & Markdown files** designed to guide you through the fascinating world of quantum computing. Whether you're a student, researcher, or enthusiast, these hands-on tutorials will help you understand quantum mechanics and develop practical quantum algorithms.
+This repository contains a **comprehensive collection of Jupyter notebooks** designed to guide you through the fascinating world of quantum computing. Whether you're a student, researcher, or enthusiast, these hands-on tutorials will help you understand quantum mechanics and develop practical quantum algorithms.
 
 We utilize **Qiskit**, the powerful open-source quantum computing framework developed by IBM, as our primary toolbox for quantum exploration.
 
