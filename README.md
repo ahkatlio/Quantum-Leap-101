@@ -96,7 +96,7 @@ Your journey begins here with essential setup and verification:
 
 | Module | Description | Duration |
 |--------|-------------|----------|
-| [Superposition](#scrollTo=6-AJIo88-Lsb) | Understanding quantum superposition | 25 min |
+| [Superposition](materials/maths/Superposition.ipynb) | Understanding quantum superposition | 25 min |
 | [Qubits](#scrollTo=YcR6gLpS_MI8) | Quantum bits and their properties | 30 min |
 | [Measurement](#scrollTo=_jHh1PkYQLue) | Quantum measurement and wave function collapse | 25 min |
 | [Entanglement](#scrollTo=afLi79nxg2vr) | Quantum entanglement and correlations | 30 min |
