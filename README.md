@@ -91,7 +91,7 @@ Your journey begins here with essential setup and verification:
 |--------|-------------|----------|
 | [Getting Set Up](Getting%20Set%20Up.ipynb) | Environment setup & Qiskit installation | 10 min |
 | [Postulates of Quantum Mechanics](materials/maths/Postulates%20of%20Quantum%20Mechanics%20and%20Wave-Particle%20Duality.md) | Fundamental principles of quantum mechanics | 30 min |
-| [Dirac Notation](materials/maths/Dirac%20Notation.md) | Mathematical foundation for quantum mechanics | 20 min |
+| [Dirac Notation](materials/maths/Dirac%20Notation.ipynb) | Mathematical foundation for quantum mechanics | 20 min |
 
 ### Quantum Fundamentals
 
