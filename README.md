@@ -114,8 +114,8 @@ Your journey begins here with essential setup and verification:
 | [H Gate](#scrollTo=-jgtvdt5yQoV) | Hadamard gate for creating superposition states | 10 min |
 | [CNOT Gate](#scrollTo=TpkK_L-8M6GC) | Two-qubit controlled-NOT entangling gate | 12 min |
 | [Rotation Gates](#scrollTo=6mnKKSGnFXAn) | Parameterized rotations: $R_x$, $R_y$, $R_z$ | 12 min |
-| [Y Gate](#scrollTo=7CMvMiWkLEN3) | Pauli-$Y$ operation (bit and phase flip) | 8 min |
-| [Z Gate](#scrollTo=kVfp3mciQLsr) | Pauli-$Z$ phase-flip operation | 8 min |
+| [Y Gate](#scrollTo=7CMvMiWkLEN3) | Pauli-Y operation (bit and phase flip) | 8 min |
+| [Z Gate](#scrollTo=kVfp3mciQLsr) | Pauli-Z phase-flip operation | 8 min |
 | [S Gate](#scrollTo=Gxdbi_v-iBeY) | Phase gate applying a $\pi/2$ phase shift | 8 min |
 | [S<sup>†</sup> Gate](#scrollTo=CSMeSW1EWQtC) | Inverse S gate with $-\pi/2$ phase shift | 8 min |
 | [T Gate](#scrollTo=X_WJ8mbN5Akr) | $\pi/4$ phase gate for universal sets | 8 min |
