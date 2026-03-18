@@ -151,12 +151,12 @@ We welcome contributions! If you have suggestions, bug fixes, or new content:
     </td>
     <td align="left" style="padding: 20px;">
       <h3>Abdullah Al Omar Galib (Ahkatlio)</h3>
-      <p><strong>Founder & Lead Instructor</strong></p>
+      <p><strong>Lead Instructor</strong></p>
       <p><em>Mission:</em> Making quantum computing accessible to everyone</p>
       <p><strong>Motto:</strong> <em>"Brotherhood, respect, love, and we prosper."</em></p>
       <p>
         <a href="https://github.com/ahkatlio">GitHub</a> • 
-        <a href="https://linkedin.com">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/abdullah-al-omar-galib-30b6b1258/">LinkedIn</a>
       </p>
     </td>
   </tr>
