@@ -102,6 +102,27 @@ Your journey begins here with essential setup and verification:
 | [Entanglement](materials/maths/Entanglement.ipynb) | Quantum entanglement and correlations | 30 min |
 | [Bloch Sphere](materials/maths/Bloch%20Sphere.ipynb) | Visualizing single-qubit states | 20 min |
 
+### Classical Logic Gates
+| Module | Description | Duration |
+|--------|-------------|----------|
+| [Classical Logic Gates](materials/maths/Classical%20Logic%20Gates.ipynb) | AND, OR, NOT, XOR gates and their quantum equivalents |  30 min |
+
+### Fundamental Quantum Gates
+| Module | Description | Duration |
+|--------|-------------|----------|
+| [X Gate](#scrollTo=GSL35duv8447) | Bit-flip gate that maps $0 \leftrightarrow 1$ | 10 min |
+| [H Gate](#scrollTo=-jgtvdt5yQoV) | Hadamard gate for creating superposition states | 10 min |
+| [CNOT Gate](#scrollTo=TpkK_L-8M6GC) | Two-qubit controlled-NOT entangling gate | 12 min |
+| [Rotation Gates](#scrollTo=6mnKKSGnFXAn) | Parameterized rotations: $R_x$, $R_y$, $R_z$ | 12 min |
+| [Y Gate](#scrollTo=7CMvMiWkLEN3) | Pauli-$Y$ operation (bit and phase flip) | 8 min |
+| [Z Gate](#scrollTo=kVfp3mciQLsr) | Pauli-$Z$ phase-flip operation | 8 min |
+| [S Gate](#scrollTo=Gxdbi_v-iBeY) | Phase gate applying a $\pi/2$ phase shift | 8 min |
+| [S<sup>†</sup> Gate](#scrollTo=CSMeSW1EWQtC) | Inverse S gate with $-\pi/2$ phase shift | 8 min |
+| [T Gate](#scrollTo=X_WJ8mbN5Akr) | $\pi/4$ phase gate for universal sets | 8 min |
+| [T<sup>†</sup> Gate](#scrollTo=zTvLUVyeCbLd) | Inverse T gate with $-\pi/4$ phase shift | 8 min |
+| [Toffoli Gate](#scrollTo=syv63xU-xUJC) | Three-qubit controlled-controlled-NOT gate | 12 min |
+| [SWAP Gate](#scrollTo=ahzYdhVyKRss) | Exchanges the states of two qubits | 10 min |
+
 ---
 
 ## How to Use This Repository
@@ -137,12 +158,6 @@ We welcome contributions! If you have suggestions, bug fixes, or new content:
 ---
 
 ## Author
-<div align="center">
-
-### Visionary & Creator
-
-</div>
-
 <table align="center" style="border: none; width: auto;">
   <tr>
     <td align="center" style="padding: 20px;">
