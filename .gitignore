@@ -1,0 +1,4 @@
+\.venv
+HiddenCode.py
+quantum_grader.py
+\__pycache__
