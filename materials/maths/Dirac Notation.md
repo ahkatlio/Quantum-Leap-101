@@ -1,0 +1,251 @@
+# Dirac Notation: The Language of Quantum Mechanics
+
+Before we start with the fascinating world of quantum states and superposition, we need to equip ourselves with the right language to describe them. In quantum mechanics, we use a powerful and elegant mathematical framework called **Dirac notation** (also known as **bra-ket notation**), introduced by physicist Paul Dirac. Think of it as the grammar of quantum mechanics, once you get comfortable with it, everything else becomes much easier to express and reason about.
+
+## Kets: Representing Quantum States
+
+In Dirac notation, a quantum state is represented by a **ket**, written as:
+
+$$|\psi\rangle$$
+
+The $|\cdot\rangle$ symbol is simply a container for a label. So $|\psi\rangle$, $|0\rangle$, $|1\rangle$, or even $|\text{spin up}\rangle$ are all valid kets. Mathematically, a ket is just a **column vector** living in a complex vector space called a **Hilbert space**.
+
+For example, the two basis states of a qubit (which we'll explore more soon) are:
+
+$$|0\rangle = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \qquad |1\rangle = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+
+These are the quantum analogs of the classical bits 0 and 1.
+
+## Bras: The Dual of a Ket
+
+Every ket $|\psi\rangle$ has a corresponding **bra**, written as $\langle\psi|$. If the ket is a column vector, the bra is its **conjugate transpose** (also called the Hermitian adjoint), making it a row vector:
+
+$$\text{If } |\psi\rangle = \begin{bmatrix} \alpha \\ \beta \end{bmatrix}, \quad \text{then} \quad \langle\psi| = \begin{bmatrix} \alpha^* & \beta^* \end{bmatrix}$$
+
+where $\alpha^*$ and $\beta^*$ denote the complex conjugates of $\alpha$ and $\beta$. Together, bras and kets form **bra-ket** pairs.
+
+## Inner Product and Orthonormality
+
+Now that we have bras and kets, we can define the **inner product** of two quantum states $|\phi\rangle$ and $|\psi\rangle$ by combining a bra with a ket:
+
+$$\langle\phi|\psi\rangle$$
+
+This is read as *"bra phi, ket psi"* and produces a **complex number** (a scalar). For column vectors, this is exactly the standard dot product generalized to complex numbers:
+
+$$\langle\phi|\psi\rangle = \sum_i \phi_i^* \psi_i$$
+
+The inner product tells us how much two states "overlap." This has a deep physical meaning, it relates to the **probability amplitude** of transitioning from one state to another.
+
+### What is Orthonormality?
+
+A set of states $\{|i\rangle\}$ is called **orthonormal** if it satisfies two conditions simultaneously:
+
+- **Orthogonality**: Different basis states have zero overlap.
+$$\langle i | j \rangle = 0 \quad \text{for } i \neq j$$
+
+- **Normality**: Each state has unit length (norm of 1).
+$$\langle i | i \rangle = 1$$
+
+These two conditions are neatly combined into a single expression using the **Kronecker delta** $\delta_{ij}$:
+
+$$\langle i | j \rangle = \delta_{ij} = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases}$$
+
+Let's verify this for our qubit basis states $|0\rangle$ and $|1\rangle$:
+
+$$\langle 0 | 0 \rangle = \begin{bmatrix} 1 & 0 \end{bmatrix}\begin{bmatrix} 1 \\ 0 \end{bmatrix} = 1 \checkmark$$
+
+$$\langle 0 | 1 \rangle = \begin{bmatrix} 1 & 0 \end{bmatrix}\begin{bmatrix} 0 \\ 1 \end{bmatrix} = 0 \checkmark$$
+
+The basis $\{|0\rangle, |1\rangle\}$ is indeed orthonormal. We will be using this basis, called the **computational basis**, throughout this module.
+
+## Outer Product
+
+While the inner product $\langle\phi|\psi\rangle$ gives us a scalar, the **outer product** $|\psi\rangle\langle\phi|$ gives us a **matrix** (a linear operator). You form it by multiplying a ket on the left with a bra on the right:
+
+$$|\psi\rangle\langle\phi| = \begin{bmatrix} \psi_1 \\ \psi_2 \end{bmatrix}\begin{bmatrix} \phi_1^* & \phi_2^* \end{bmatrix} = \begin{bmatrix} \psi_1\phi_1^* & \psi_1\phi_2^* \\ \psi_2\phi_1^* & \psi_2\phi_2^* \end{bmatrix}$$
+
+A particularly important outer product is the **projector** $|\psi\rangle\langle\psi|$, which projects any state onto the direction of $|\psi\rangle$. For our qubit basis:
+
+$$|0\rangle\langle 0| = \begin{bmatrix} 1 & 0 \\ 0 & 0 \end{bmatrix}, \qquad |1\rangle\langle 1| = \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}$$
+
+Notice that $|0\rangle\langle 0| + |1\rangle\langle 1| = I$, the identity matrix. This is a statement of **completeness**, the basis spans the entire space. We will encounter outer products frequently when we discuss measurements and density matrices.
+
+## Hermitian Matrices and Operators
+
+An operator $\hat{A}$ is called **Hermitian** (or **self-adjoint**) if it equals its own conjugate transpose:
+
+$$\hat{A} = \hat{A}^\dagger$$
+
+where $\hat{A}^\dagger$ (read as *"A dagger"*) is obtained by transposing the matrix and taking the complex conjugate of every entry. In Dirac notation, this is equivalently stated as:
+
+$$\langle\phi|\hat{A}|\psi\rangle = \langle\psi|\hat{A}|\phi\rangle^*$$
+
+### Why do Hermitian Operators Matter?
+
+In quantum mechanics, every **physical observable**, things we can actually measure, like energy, spin, or position, is represented by a Hermitian operator. This isn't just a mathematical convenience; it's a deep physical requirement. There are two key reasons why:
+**Reason 1: Hermitian Operators Always Have Real Eigenvalues**
+
+When we perform a measurement in quantum mechanics, the outcome is always one of the **eigenvalues** of the corresponding operator. Since measurement outcomes are physical quantities, a number on a dial, an energy reading, a detector click, they must be **real numbers**. You can't measure a complex energy like $3 + 2i$ joules.
+
+Let's prove this rigorously. Suppose $\hat{A}$ is Hermitian and $|\psi\rangle$ is one of its eigenstates with eigenvalue $\lambda$, so:
+
+$$\hat{A}|\psi\rangle = \lambda|\psi\rangle$$
+
+Take the inner product of both sides with $\langle\psi|$ from the left:
+
+$$\langle\psi|\hat{A}|\psi\rangle = \lambda\langle\psi|\psi\rangle$$
+
+Now take the complex conjugate of the entire equation. Using the Hermitian condition $\langle\psi|\hat{A}|\psi\rangle = \langle\psi|\hat{A}|\psi\rangle^*$ (since $\hat{A} = \hat{A}^\dagger$):
+
+$$\langle\psi|\hat{A}|\psi\rangle^* = \lambda^*\langle\psi|\psi\rangle^*$$
+
+Since $\langle\psi|\psi\rangle$ is a real positive number (it's the norm squared of a vector), we have $\langle\psi|\psi\rangle^* = \langle\psi|\psi\rangle$. Subtracting the two equations:
+
+$$0 = (\lambda - \lambda^*)\langle\psi|\psi\rangle$$
+
+Since $\langle\psi|\psi\rangle \neq 0$ for any valid quantum state, we must have $\lambda = \lambda^*$, which means $\lambda$ is **real**. $\blacksquare$
+
+This is not true for arbitrary operators, only Hermitian ones guarantee real eigenvalues, which is precisely why they are chosen to represent observables.
+
+**Reason 2: Eigenstates of Hermitian Operators Form a Complete Orthonormal Basis**
+
+The second key property is that the eigenstates of a Hermitian operator are **mutually orthogonal** and together **span the entire Hilbert space**. This means any quantum state $|\psi\rangle$ can always be written as a superposition of measurement outcome states, which is what makes the probabilistic interpretation of quantum mechanics self-consistent.
+
+Let's prove orthogonality. Suppose $\hat{A}$ has two eigenstates $|\psi_1\rangle$ and $|\psi_2\rangle$ with **different** eigenvalues $\lambda_1 \neq \lambda_2$:
+
+$$\hat{A}|\psi_1\rangle = \lambda_1|\psi_1\rangle, \qquad \hat{A}|\psi_2\rangle = \lambda_2|\psi_2\rangle$$
+
+Take the inner product of the first equation with $\langle\psi_2|$:
+
+$$\langle\psi_2|\hat{A}|\psi_1\rangle = \lambda_1\langle\psi_2|\psi_1\rangle$$
+
+Now use the Hermitian condition $\langle\psi_2|\hat{A}|\psi_1\rangle = \langle\psi_1|\hat{A}|\psi_2\rangle^*$:
+
+$$\langle\psi_1|\hat{A}|\psi_2\rangle^* = \lambda_1\langle\psi_2|\psi_1\rangle$$
+
+$$(\lambda_2\langle\psi_1|\psi_2\rangle)^* = \lambda_1\langle\psi_2|\psi_1\rangle$$
+
+Since $\lambda_2$ is real (we proved that above), $\lambda_2^* = \lambda_2$, and using $\langle\psi_1|\psi_2\rangle^* = \langle\psi_2|\psi_1\rangle$:
+
+$$\lambda_2\langle\psi_2|\psi_1\rangle = \lambda_1\langle\psi_2|\psi_1\rangle$$
+
+$$(\lambda_1 - \lambda_2)\langle\psi_2|\psi_1\rangle = 0$$
+
+Since $\lambda_1 \neq \lambda_2$ by assumption, we must have $\langle\psi_2|\psi_1\rangle = 0$. The eigenstates are **orthogonal**. $\blacksquare$
+
+### Concrete Example: The Pauli-Z Operator
+
+Let's put all of this into practice with the **Pauli-Z** operator:
+
+$$\hat{Z} = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}$$
+
+**Verifying it is Hermitian:**
+
+$$\hat{Z}^T = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix}, \qquad \hat{Z}^\dagger = \begin{bmatrix} 1^* & 0^* \\ 0^* & (-1)^* \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 0 & -1 \end{bmatrix} = \hat{Z} \checkmark$$
+
+Since all entries are real, the conjugate transpose is just the transpose, and since the matrix is already symmetric, $\hat{Z} = \hat{Z}^\dagger$.
+
+**Finding the eigenvalues:**
+
+We solve the characteristic equation $\det(\hat{Z} - \lambda I) = 0$:
+
+$$\det\begin{bmatrix} 1 - \lambda & 0 \\ 0 & -1 - \lambda \end{bmatrix} = (1 - \lambda)(-1 - \lambda) = 0$$
+
+$$-(1-\lambda)(1+\lambda) = 0 \implies -(1 - \lambda^2) = 0 \implies \lambda^2 = 1$$
+
+$$\therefore \lambda_1 = +1, \quad \lambda_2 = -1$$
+
+Both eigenvalues are real, consistent with our proof above.
+
+**Finding the eigenstates:**
+
+For $\lambda_1 = +1$, solve $(\hat{Z} - I)|\psi\rangle = 0$:
+
+$$\begin{bmatrix} 0 & 0 \\ 0 & -2 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \implies -2b = 0 \implies b = 0$$
+
+So the eigenstate is $\begin{bmatrix} 1 \\ 0 \end{bmatrix} = |0\rangle$, with $\hat{Z}|0\rangle = +1|0\rangle$.
+
+For $\lambda_2 = -1$, solve $(\hat{Z} + I)|\psi\rangle = 0$:
+
+$$\begin{bmatrix} 2 & 0 \\ 0 & 0 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \implies 2a = 0 \implies a = 0$$
+
+So the eigenstate is $\begin{bmatrix} 0 \\ 1 \end{bmatrix} = |1\rangle$, with $\hat{Z}|1\rangle = -1|1\rangle$.
+
+**Verifying orthonormality of eigenstates:**
+
+$$\langle 0 | 1 \rangle = \begin{bmatrix}1 & 0\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix} = 0 \quad \checkmark \quad \text{(orthogonal)}$$
+$$\langle 0 | 0 \rangle = 1, \quad \langle 1 | 1 \rangle = 1 \quad \checkmark \quad \text{(normalized)}$$
+
+The eigenstates $\{|0\rangle, |1\rangle\}$ form a complete orthonormal basis, exactly as the theory predicts.
+
+---
+
+#### Concrete Example: The Pauli-X Operator
+
+Now let's do the same for the **Pauli-X** operator, which is physically important because it represents a quantum bit-flip:
+
+$$\hat{X} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}$$
+
+**Verifying it is Hermitian:**
+
+$$\hat{X}^\dagger = \begin{bmatrix} 0^* & 1^* \\ 1^* & 0^* \end{bmatrix} = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \hat{X} \checkmark$$
+
+**Finding the eigenvalues:**
+
+$$\det(\hat{X} - \lambda I) = \det\begin{bmatrix} -\lambda & 1 \\ 1 & -\lambda \end{bmatrix} = \lambda^2 - 1 = 0$$
+
+$$\therefore \lambda_1 = +1, \quad \lambda_2 = -1$$
+
+Again, both eigenvalues are real.
+
+**Finding the eigenstates:**
+
+For $\lambda_1 = +1$, solve $(\hat{X} - I)|\psi\rangle = 0$:
+
+$$\begin{bmatrix} -1 & 1 \\ 1 & -1 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \implies -a + b = 0 \implies a = b$$
+
+The (unnormalized) solution is $\begin{bmatrix}1 \\ 1\end{bmatrix}$. Normalizing (dividing by $\|\cdot\| = \sqrt{2}$):
+
+$$|{+}\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ 1\end{bmatrix} = \frac{|0\rangle + |1\rangle}{\sqrt{2}}$$
+
+For $\lambda_2 = -1$, solve $(\hat{X} + I)|\psi\rangle = 0$:
+
+$$\begin{bmatrix} 1 & 1 \\ 1 & 1 \end{bmatrix}\begin{bmatrix} a \\ b \end{bmatrix} = \begin{bmatrix} 0 \\ 0 \end{bmatrix} \implies a + b = 0 \implies a = -b$$
+
+Normalizing:
+
+$$|{-}\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ -1\end{bmatrix} = \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$
+
+These two states $|+\rangle$ and $|-\rangle$ are called the **Hadamard basis** or **X-basis**, and they will become very important when we discuss measurements and the Hadamard gate.
+
+**Verifying orthonormality:**
+
+$$\langle +|-\rangle = \frac{1}{\sqrt{2}}\begin{bmatrix}1 & 1\end{bmatrix} \cdot \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ -1\end{bmatrix} = \frac{1}{2}(1 - 1) = 0 \checkmark$$
+
+$$\langle +|+\rangle = \frac{1}{2}(1+1) = 1, \quad \langle -|-\rangle = \frac{1}{2}(1+1) = 1 \checkmark$$
+
+Perfect — the eigenstates of $\hat{X}$ are also orthonormal, as expected.
+
+---
+
+> 💡 **Quick Check**: The matrix below appears in the **Pauli-Y** operator (up to a factor). Verify it is Hermitian, then find its eigenvalues and eigenstates:
+> $$\hat{Y} = \begin{bmatrix} 0 & -i \\ i & 0 \end{bmatrix}$$
+> *Hint: this one has complex entries, so be careful with the conjugate transpose step.*
+
+> 💡 **Key Takeaway**: Every Hermitian operator gives you two things for free — a set of **real measurement outcomes** (the eigenvalues) and a **complete orthonormal basis** to describe your quantum state in (the eigenstates). This is why the mathematical structure of Hermitian operators maps so perfectly onto the physical structure of quantum measurement.
+
+### How to Compute the Tensor Product
+
+For two column vectors, the tensor product is computed by multiplying every element of the first vector by the entire second vector:
+
+$$|\psi\rangle \otimes |\phi\rangle = \begin{bmatrix} \psi_1 \\ \psi_2 \end{bmatrix} \otimes \begin{bmatrix} \phi_1 \\ \phi_2 \end{bmatrix} = \begin{bmatrix} \psi_1 \begin{bmatrix} \phi_1 \\ \phi_2 \end{bmatrix} \\ \psi_2 \begin{bmatrix} \phi_1 \\ \phi_2 \end{bmatrix} \end{bmatrix} = \begin{bmatrix} \psi_1 \phi_1 \\ \psi_1 \phi_2 \\ \psi_2 \phi_1 \\ \psi_2 \phi_2 \end{bmatrix}$$
+
+For example, the two-qubit state $|0\rangle \otimes |1\rangle = |01\rangle$ is:
+
+$$|01\rangle = \begin{bmatrix} 1 \\ 0 \end{bmatrix} \otimes \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 0 \end{bmatrix}$$
+
+Notice that a single qubit lives in a **2-dimensional** Hilbert space, but a two-qubit system lives in a **4-dimensional** space ($2 \times 2 = 4$). More generally, an $n$-qubit system requires $2^n$ dimensions, this exponential scaling is precisely what gives quantum computers their potential power.
+
+The tensor product also extends to operators. If $\hat{A}$ acts on system A and $\hat{B}$ acts on system B, the combined operator on the composite system is $\hat{A} \otimes \hat{B}$.
+
+> 💡 **Key Insight**: Not all states of a composite system can be written as a simple tensor product $|\psi\rangle_A \otimes |\phi\rangle_B$. States that *cannot* be decomposed this way are called **entangled states**, one of the most striking and useful phenomena in quantum information, which we will study in detail later.
