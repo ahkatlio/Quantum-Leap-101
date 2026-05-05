@@ -110,18 +110,18 @@ Your journey begins here with essential setup and verification:
 ### Fundamental Quantum Gates
 | Module | Description | Duration |
 |--------|-------------|----------|
-| [X Gate](#scrollTo=GSL35duv8447) | Bit-flip gate that maps $0 \leftrightarrow 1$ | 10 min |
-| [H Gate](#scrollTo=-jgtvdt5yQoV) | Hadamard gate for creating superposition states | 10 min |
-| [CNOT Gate](#scrollTo=TpkK_L-8M6GC) | Two-qubit controlled-NOT entangling gate | 12 min |
-| [Rotation Gates](#scrollTo=6mnKKSGnFXAn) | Parameterized rotations: $R_x$, $R_y$, $R_z$ | 12 min |
-| [Y Gate](#scrollTo=7CMvMiWkLEN3) | Pauli-Y operation (bit and phase flip) | 8 min |
-| [Z Gate](#scrollTo=kVfp3mciQLsr) | Pauli-Z phase-flip operation | 8 min |
-| [S Gate](#scrollTo=Gxdbi_v-iBeY) | Phase gate applying a $\pi/2$ phase shift | 8 min |
-| [S<sup>†</sup> Gate](#scrollTo=CSMeSW1EWQtC) | Inverse S gate with $-\pi/2$ phase shift | 8 min |
-| [T Gate](#scrollTo=X_WJ8mbN5Akr) | $\pi/4$ phase gate for universal sets | 8 min |
-| [T<sup>†</sup> Gate](#scrollTo=zTvLUVyeCbLd) | Inverse T gate with $-\pi/4$ phase shift | 8 min |
-| [Toffoli Gate](#scrollTo=syv63xU-xUJC) | Three-qubit controlled-controlled-NOT gate | 12 min |
-| [SWAP Gate](#scrollTo=ahzYdhVyKRss) | Exchanges the states of two qubits | 10 min |
+| [X Gate](materials/maths/X-Gate.ipynb) | Bit-flip gate that maps $0 \leftrightarrow 1$ | 10 min |
+| [H Gate](materials/maths/H-Gate.ipynb) | Hadamard gate for creating superposition states | 10 min |
+| [CNOT Gate](materials/maths/CNOT-Gate.ipynb) | Two-qubit controlled-NOT entangling gate | 12 min |
+| [Rotation Gates](materials/maths/Rotation-Gates.ipynb) | Parameterized rotations: $R_x$, $R_y$, $R_z$ | 12 min |
+| [Y Gate](materials/maths/Y-Gate.ipynb) | Pauli-Y operation (bit and phase flip) | 8 min |
+| [Z Gate](materials/maths/Z-Gate.ipynb) | Pauli-Z phase-flip operation | 8 min |
+| [S Gate](materials/maths/S-Gate.ipynb) | Phase gate applying a $\pi/2$ phase shift | 8 min |
+| [S<sup>†</sup> Gate](materials/maths/S-Dagger-Gate.ipynb) | Inverse S gate with $-\pi/2$ phase shift | 8 min |
+| [T Gate](materials/maths/T-Gate.ipynb) | $\pi/4$ phase gate for universal sets | 8 min |
+| [T<sup>†</sup> Gate](materials/maths/T-Dagger-Gate.ipynb) | Inverse T gate with $-\pi/4$ phase shift | 8 min |
+| [Toffoli Gate](materials/maths/Toffoli-Gate.ipynb) | Three-qubit controlled-controlled-NOT gate | 12 min |
+| [SWAP Gate](materials/maths/SWAP-Gate.ipynb) | Exchanges the states of two qubits | 10 min |
 
 ---
 
